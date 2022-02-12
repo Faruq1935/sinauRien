@@ -1,0 +1,65 @@
+{{ define "main" }}
+<header class="jumbotron jumbotron-fluid mt-5 jumbotron-body">
+    <div class="container">
+      <div class="row">
+        <div class="my-5 text-center">
+            <img class="img-jumbotron" src="/assets/img/jumbotron.png" alt="">
+            <h1 class="display-4 font-weight-bold">sinauRien</h1>
+            <p class="lead" style="margin-top: -15px;">Budayakan <strong class="font-weight-bold">membaca</strong> <i>(sampai paham)</i></p>
+            <div class="mt-4">
+              
+        </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block">
+          
+        </div>
+      </div>
+    </div>
+</header>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="container artikel-body pt-5">
+      <div class="row mb-5">
+        <div class="">
+           <h2 class="h2">Artikel Terbaru</h2>
+            <p class="lead">Mau cari artikel apa ?</p>
+        </div>
+    </div>
+  </div>
+      {{ range (.Paginate (where .Site.RegularPages "Section" "isi")).Pages }}
+      <div class="col-md-6 col-lg-4 mb-4 d-flex">
+          <div class="card shadow-sm p-3 mb-2 bg-body" style="border-radius: 12px;">
+              <a href=" {{ .Permalink }} ">
+                  <img src="/img/{{ .Params.featured_image }}" alt="sinauRien" class="card-img-top img-index">
+              </a>
+              <div class="card-body">
+                      <h6 class="card-title h6 font-weight-bold">
+                        <a href=" {{ .Permalink }} " style="text-decoration: none; color: black;">
+                          {{ .Title }}
+                        </a>
+                      </h6>
+                      <div class="text-secondary small">
+                        {{ .Description }}
+                      </div>
+                  
+              </div>
+            </div>
+          </div>
+          {{ end }}
+
+         
+      </div>
+  </div>
+  <div class="container text-center mt-3 mb-5">
+    <div class="artikel-pagination">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  </div>
+</div>
+
+
+
+{{ end }}

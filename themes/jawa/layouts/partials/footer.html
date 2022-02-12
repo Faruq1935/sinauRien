@@ -1,0 +1,15 @@
+<head>
+    {{- partial "head.html" . }}
+
+</head>
+<footer class="text-center" style="background-color: #57cc99;">
+    <div class="container pt-3 pb-3 pt-md-5 pb-md-5">
+        <div class="row">
+            <div class="col">
+                <span>&copy; {{ now.Format "2006"}}</span> <a href="{{.Site.BaseURL}}"  style="text-decoration: none;">{{ .Site.Title }}</a><span> | </span><a href="https://github.com/Faruq1935" target="blank"  style="text-decoration: none;">Github</a> <br>
+                <p>Di buat menggunakan HUGO</p>
+
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    background-color: #C7F9CC;
+}
+* {
+    font-family: 'Inter', sans-serif;
+}
+.font-weight-bold {
+    font-weight: 700!important;
+    }
+/* Bagian navbar */
+nav a:hover {
+    color: #80ed99!important;
+}
+.navbar-dark .navbar-toggler {
+    border-color: transparent!important;
+}
+/* akhir navbar */
+
+/* Bagian jumbotron */
+.jumbotron-body {
+    background-color: #80ed99;
+}
+.img-jumbotron {
+    width: 180px;
+    border-radius: 12px;
+}
+.jumbotron h1  {
+    color: #fff;
+}
+/* akhir jumbotron */
+
+/* Bagian artikel */
+#h2-single {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+.img-index {
+    border-radius: 8px!important;
+}
+h6, .h6 {
+    font-size: 1rem;
+}
+/* akhir artikel */
+
+/* Bagian sidebar */
+.header-sidebar {
+    font-size: 18px;
+}
+.kategori-aside:hover {
+    background-color: #e9ecef;
+    border-radius: 100px;
+}
+.kategori-aside {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    color: #57cc99;
+}
+/* ===BAGIAN UKURAN MOBILE=== */
+
+
+
+/* ===AKHIR UKURAN MOBILE=== */
+/* akhir sidebar */
+
+/* Bagian pagination */ 
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff!important;
+    background-color: #57cc99!important;
+    border-color: #57cc99!important;
+}
+.page-link {
+    position: relative;
+    display: block;
+    color: #57cc99!important;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.page-item.disabled .page-link {
+    color: #6c757d!important;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+/* akhir pagination */
+
+/* ======= */
+/* ======= */
+
+/* Bagian footer */
+footer a:hover {
+    color: #80ed99!important;
+}
+footer a {
+    color: #fff;
+}
+footer p {
+    color: #fff;
+}
+footer span {
+    color: #fff;
+}
+/* akhir footer */

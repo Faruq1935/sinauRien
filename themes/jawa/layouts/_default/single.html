@@ -1,0 +1,76 @@
+
+{{ define "main" }}
+{{- partial "head.html" . -}}
+{{- partial "nav.html" . -}}
+<br><br>
+<br><br>
+<div class="container my-0 my-md-5" style="height: auto !important;">
+    <div class="row" style="height: auto !important;">
+    <div class="post col-sm-12 col-lg-8 px-0 px-md-3">
+            <article class="card shadow-sm p-3 mb-3 bg-body" style="border-radius: 12px;">
+                <div class="card-body p-md-5">
+                    <p class="text-end" style="font-size: small;">• Di tulis pada
+                        <span style="color: #57cc99;">{{  .Date.Format "2006-01-02"  }}</span>
+                    </p>
+                    <p class="pt-4 author-single">
+                        <img src="{{ .Site.Author.image }}" class="rounded-circle" width="32" height="32" />
+                        {{ .Params.author }}
+                    </p>
+                     
+                    <!-- <P class="">{{ .Params.des }}</P> -->
+                   
+                    <h2 class="font-weight-bold" id="h2-single">{{.Title}}</h2>
+                    <hr style="background-color: black;">
+                    <div class="tagInfo">
+                        {{ with .Params.tags }}
+                        {{ range .}}
+                        <span class="badge badge-info"><a class="text-decoration-none text-dark"
+                                href="/tags/{{ . | urlize }}">#{{ . }}</a></span>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                    <br><br>
+                    <div class="center">
+                        <div>
+                            <img class=" img-fluid" src="/img/{{ .Params.featured_image }}" alt="" srcset="">
+                        </div>
+                    </div>
+                    <br><br>
+                    {{ .Content }}
+                </div>
+            </article>
+        </div>
+        <aside class="col-sm-12 col-lg-4 aside-singel mobile-aside" style="height: auto !important;">
+            <div class="widget mb-5 d-none d-md-block hidden-print">
+                <div class="widget-content border p-3 bg-white shadow-sm p-3 mb-3 bg-body" style="border-radius: 12px;">
+                        <div class="card-header bg-transparent border-success header-sidebar">Header</div>
+                        <div class="card-body" style="color: #57cc99;">
+                          <h5 class="card-title">Success card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success"></div>      
+                </div>
+
+
+
+                <div class="widget-content border p-3 bg-white shadow-sm p-3 mb-3 bg-body" style="border-radius: 12px;">
+                <div class="card-header bg-transparent border-success header-sidebar">Kategori artikel</div>
+                    <div class="card-body text-success">
+                            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                             
+                            <a class="text-success text-decoration-none"
+                                href="/categories/{{ $name }}">
+                                <li class="kategori-aside">{{ $name }}<br></li>
+                            </a>
+                               
+                            {{ end }}  
+                     </div>
+                    <div class="card-footer bg-transparent border-success"></div>      
+             </div>
+            </div>
+        </aside>
+        
+    </div>
+</div>
+
+{{end}}

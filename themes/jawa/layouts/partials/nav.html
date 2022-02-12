@@ -1,0 +1,45 @@
+<head>
+
+  {{- partial "head.html" . }}
+
+  <style>
+   
+  </style>
+
+</head>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #57cc99;">
+  <div class="container">
+    <a class="navbar-brand" href="{{.Site.BaseURL}}"><img class="rounded" src="/assets/img/jumbotron.png" alt="" width="30" height="30"> {{ .Site.Title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll" style="color: #fff;">
+      <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll ms-auto" style="--bs-scroll-height: 100px;">
+        <li class="nav-item nav-icons">
+          <a class="nav-link" href="{{.Site.BaseURL}}"  style="color: #fff;"><i class="fas fa-home mx-1"></i> Beranda</a>
+        </li>
+        <!--  <li class="nav-item nav-icons">
+          <a class="nav-link" href="#"  style="color: #fff;">Link</a>
+        </li>  -->
+        <li class="nav-item nav-icons dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="color: #fff;" ><i class="fas fa-edit"></i> Soal & Jawaban
+          </a>
+          <ul class="dropdown-menu border" aria-labelledby="navbarScrollingDropdown" style="background-color: #fff;">
+            <li><a class="dropdown-item" href="#"  style=" color: #80ed99;">Action</a></li>
+            <li><a class="dropdown-item" href="#" style=" color: #80ed99;">Another action</a></li>
+            <li><a class="dropdown-item" href="#" style=" color: #80ed99;">Something else here</a></li>
+          </ul>
+        </li>
+          <li class="nav-item nav-icons">
+          <a class="nav-link" href="#"  style="color: #fff;"><i class="fas fa-list-alt"></i> Kategori</a>
+        </li>  
+      </ul>
+      <form class="d-flex" style="margin-left: 5%;">
+        <input class="form-control me-2" type="search" placeholder="Mau cari artikel apa ?" aria-label="Search">
+        <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- {{ .Site.Title }} -->
