@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 body {
-    background-color: #C7F9CC;
+    background-color: #f5fcf6;;
 }
 * {
     font-family: 'Inter', sans-serif;
@@ -93,7 +93,8 @@ h6, .h6 {
 
 /* Bagian footer */
 footer a:hover {
-    color: #80ed99!important;
+    /* color: #80ed99!important; */
+    color: red!important;
 }
 footer a {
     color: #fff;
